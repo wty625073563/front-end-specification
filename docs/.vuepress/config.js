@@ -19,6 +19,31 @@ module.exports = {
             'cooeration'
           ]
         }
+      ],
+
+      '/guide/coding-standards/': [
+        {
+          title: '编码规范',
+          collapsable: false,
+          children: [
+            '',
+            'html',
+            'css',
+            'javascript'
+          ]
+        }
+      ],
+
+      '/guide/tools/': [
+        {
+          title: '工具',
+          collapsable: false,
+          children: [
+            '',
+            'vscode',
+            'eslint'
+          ]
+        }
       ]
     },
     // sidebar: [
@@ -74,7 +99,17 @@ module.exports = {
     smoothScroll: true
   },
 
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@img': '/docs/assets/images'
+      }
+    }
+  },
+
   plugins: [
+    '@vuepress/back-to-top',
+    '@vuepress/active-header-links',
     '@vuepress/nprogress'
   ]
 }
