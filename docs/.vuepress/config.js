@@ -1,101 +1,49 @@
 module.exports = {
+  base: '/',
   title: '前端规范',
   theme: '@vuepress/theme-default',
+  head: [
+    ['link', { rel: 'shortcut icon', href: './public/img/favicon.ico' }]
+  ],  
 
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
     ],
-    // sidebar: 'auto',
-    sidebar: {
-      '/guide/work-process/': [
-        {
-          title: '工作流',
-          collapsable: false,
-          children: [
-            '',
-            'version',
-            'git',
-            'cooeration'
-          ]
-        }
-      ],
-
-      '/guide/coding-standards/': [
-        {
-          title: '编码规范',
-          collapsable: false,
-          children: [
-            '',
-            'html',
-            'css',
-            'javascript'
-          ]
-        }
-      ],
-
-      '/guide/tools/': [
-        {
-          title: '工具',
-          collapsable: false,
-          children: [
-            '',
-            'vscode',
-            'eslint'
-          ]
-        }
-      ]
-    },
-    // sidebar: [
-    //   {
-    //     title: '工作流程',
-    //     path: '/guide/work-process',
-    //     sidebarDepth: 3,
-    //     collapsable: false,
-    //     children: [
-    //       '',
-    //       'version',
-    //       'git',
-    //       'cooperation'
-    //     ]
-    //   },
-    //   {
-    //     title: '编码规范',
-    //     path: '/guide/coding-standards',
-    //     collapsable: false,
-    //     sidebarDepth: 3,
-    //     children: [
-    //       '/',
-    //       '/html',
-    //       '/css',
-    //       '/javascript',
-    //     ]
-    //   },
-    //   {
-    //     title: '工具',
-    //     path: '/guide/tools',
-    //     sidebarDepth: 3,
-    //     collapsable: false,
-    //     children: [
-    //       '/',
-    //       '/vscode',
-    //       '/eslint',
-    //     ]
-    //   },
-    //   // {
-    //   //   title: '推荐',
-    //   //   path: '/guide/tools',
-    //   //   collapsable: false,
-    //   //   children: [
-    //   //     '/',
-    //   //     '/vscode',
-    //   //     '/eslint',
-    //   //   ]
-    //   // }
-    // ],
+    sidebar: [
+      {
+        title: '工作流',
+        path: '/work-process/',
+        collapsable: false,
+        children: [
+          ['/work-process/version', '版本规范'],
+          ['/work-process/git', 'Git使用规范'],
+          ['/work-process/cooperation', '前后端协作规范']
+        ]
+      },
+      {
+        title: '编码规范',
+        path: '/coding-standards/',
+        collapsable: false,
+        children: [
+          ['/coding-standards/html', 'Html规范'],
+          ['/coding-standards/css', 'CSS规范'],
+          ['/coding-standards/javascript', 'JavaScript']
+        ]
+      },
+      {
+        title: '工具',
+        path: '/tools/',
+        collapsable: false,
+        children: [
+          ['/tools/vscode', 'Vscode'],
+          ['/tools/eslint', 'Eslint']
+        ]
+      },
+    ],
 
     sidebarDepth: 4,
-    lastUpdated: 'Last Updated',
+    lastUpdated: '上次更新',
     smoothScroll: true
   },
 
