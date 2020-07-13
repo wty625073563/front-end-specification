@@ -3,7 +3,7 @@ module.exports = {
   title: '前端规范',
   theme: '@vuepress/theme-default',
   head: [
-    ['link', { rel: 'shortcut icon', href: './public/img/favicon.ico' }]
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }]
   ],  
 
   themeConfig: {
