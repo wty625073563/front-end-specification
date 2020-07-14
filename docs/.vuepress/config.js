@@ -13,7 +13,6 @@ module.exports = {
     sidebar: [
       {
         title: '工作流',
-        path: '/work-process/',
         collapsable: false,
         children: [
           ['/work-process/version', '版本规范'],
@@ -23,7 +22,6 @@ module.exports = {
       },
       {
         title: '编码规范',
-        path: '/coding-standards/',
         collapsable: false,
         children: [
           ['/coding-standards/html', 'Html规范'],
@@ -32,8 +30,14 @@ module.exports = {
         ]
       },
       {
+        title: '框架规范',
+        collapsable: false,
+        children: [
+          ['/frame-standards/vue', 'VUE规范']
+        ]
+      },
+      {
         title: '工具',
-        path: '/tools/',
         collapsable: false,
         children: [
           ['/tools/vscode', 'Vscode'],
